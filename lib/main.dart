@@ -5,15 +5,23 @@ import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() {
-  runApp(
-        // GetMaterialApp(
-    //   title: "Application",
-    //   initialRoute: Routes.SPLASH ,
-    //   getPages: AppPages.routes,
-    // ),
-    MyApp()
+// Import the generated file
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
   );
+  runApp(
+      // GetMaterialApp(
+      //   title: "Application",
+      //   initialRoute: Routes.SPLASH ,
+      //   getPages: AppPages.routes,
+      // ),
+
+      MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,14 +33,13 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context , child) {
-        return  GetMaterialApp(
-      title: "Application",
-      initialRoute: Routes.SPLASH ,
-      getPages: AppPages.routes,
-    );
+      builder: (context, child) {
+        return GetMaterialApp(
+          title: "Application",
+          initialRoute: Routes.SPLASH,
+          getPages: AppPages.routes,
+        );
       },
-
     );
   }
 }

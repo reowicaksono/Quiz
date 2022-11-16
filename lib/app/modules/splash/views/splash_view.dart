@@ -32,7 +32,7 @@ class SplashView extends GetView<SplashController> {
                       width: 220,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () => Get.toNamed(Routes.MENU_SCREEN),
+                        onPressed: () => Get.offAllNamed(Routes.MENU_SCREEN),
                         style: ElevatedButton.styleFrom(
                           primary: Colors.white,
                           shape: RoundedRectangleBorder(

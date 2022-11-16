@@ -11,7 +11,7 @@ import '../controllers/detail_screen_controller.dart';
 class DetailScreenView extends GetView<DetailScreenController> {
   const DetailScreenView({Key? key}) : super(key: key);
   @override
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -28,7 +28,7 @@ class DetailScreenView extends GetView<DetailScreenController> {
               right: 20,
               bottom: 500,
               child: DottedBorder(
-                color: Colors.black,
+                color: Colors.black,  
                 dashPattern: [8, 4],
                 strokeWidth: 2,
                 child: Container(
@@ -89,26 +89,12 @@ class DetailScreenView extends GetView<DetailScreenController> {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
                     CustomRadioButton(
                       elevation: 3,
                       absoluteZeroSpacing: false,
                       unSelectedColor: Theme.of(context).canvasColor,
-                      buttonLables: [
-                        'Jupiter',
-                        'Saturnus',
-                        'Earth',
-                      ],
-                      buttonValues: [
-                        "Jupiter",
-                        "Saturnus",
-                        "Earth",
-                      ],
+                      buttonLables: controller.listAnswer,
+                      buttonValues: controller.listAnswer,
                       padding: 15,
                       enableShape: true,
                       horizontal: true,
@@ -124,7 +110,7 @@ class DetailScreenView extends GetView<DetailScreenController> {
                       selectedColor: Color(0xff7C3CFF),
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 30,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +119,7 @@ class DetailScreenView extends GetView<DetailScreenController> {
                           width: 120,
                           height: 50,
                           child: ElevatedButton(
-                            onPressed: () => Get.toNamed(Routes.DETAIL_QUIZ) ,
+                            onPressed: () => Get.toNamed(Routes.DETAIL_QUIZ),
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xffFFC10F),
                               shape: RoundedRectangleBorder(

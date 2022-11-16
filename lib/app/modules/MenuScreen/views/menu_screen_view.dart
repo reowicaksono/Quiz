@@ -82,152 +82,156 @@ class MenuScreenView extends GetView<MenuScreenController> {
                         topRight: Radius.circular(44.0.r),
                       ),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: edge.sp),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          Text(
-                            "Recent Quiz",
-                            style: mediaumTextStyle.copyWith(fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          InkWell(
-                            onTap: () => Get.toNamed(Routes.DETAIL_QUIZ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(22),
+                    child: Container(
+                      height: Get.height/2,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: edge.sp),
+                        child: ListView(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          children: [
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            Text(
+                              "Recent Quiz",
+                              style: mediaumTextStyle.copyWith(fontSize: 18),
+                            ),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            InkWell(
+                              onTap: () => Get.toNamed(Routes.DETAIL_QUIZ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(22),
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(22.r),
+                                    side: BorderSide(
+                                        color: Colors.black, width: 2.0.w),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: ListTile(
+                                      leading: Image.asset(
+                                        'assets/planet.png',
+                                        width: 65.w,
+                                      ),
+                                      title: Text(
+                                        'Astronomy',
+                                        style: mediaumTextStyle.copyWith(
+                                            fontSize: 22),
+                                      ),
+                                      subtitle:
+                                          Text('Learn about the Solar System'),
+                                      trailing: Image.asset('assets/Play.png'),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(22.r),
                               child: Card(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(22.r),
-                                  side: BorderSide(
-                                      color: Colors.black, width: 2.0.w),
+                                  side:
+                                      BorderSide(color: Colors.black, width: 2.0.w),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(10.0),
                                   child: ListTile(
-                                    leading: Image.asset(
-                                      'assets/planet.png',
-                                      width: 65.w,
-                                    ),
+                                    leading: Image.asset('assets/sains.png'),
                                     title: Text(
-                                      'Astronomy',
-                                      style: mediaumTextStyle.copyWith(
-                                          fontSize: 22),
+                                      'Sains',
+                                      style:
+                                          mediaumTextStyle.copyWith(fontSize: 22),
                                     ),
-                                    subtitle:
-                                        Text('Learn about the Solar System'),
+                                    subtitle: Text(
+                                        'Educacao Fisica, Autismo e Inclusao'),
                                     trailing: Image.asset('assets/Play.png'),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(22.r),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.r),
-                                side:
-                                    BorderSide(color: Colors.black, width: 2.0.w),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ListTile(
-                                  leading: Image.asset('assets/sains.png'),
-                                  title: Text(
-                                    'Sains',
-                                    style:
-                                        mediaumTextStyle.copyWith(fontSize: 22),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(22.r),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(22.r),
+                                  side:
+                                      BorderSide(color: Colors.black, width: 2.0.w),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: ListTile(
+                                    leading: Image.asset('assets/mtk.png'),
+                                    title: Text(
+                                      'Mathematics',
+                                      style:
+                                          mediaumTextStyle.copyWith(fontSize: 22),
+                                    ),
+                                    subtitle: Text(
+                                        'Learn fourth grade math—arithmetic,'),
+                                    trailing: Image.asset('assets/Play.png'),
                                   ),
-                                  subtitle: Text(
-                                      'Educacao Fisica, Autismo e Inclusao'),
-                                  trailing: Image.asset('assets/Play.png'),
                                 ),
                               ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(22.r),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.r),
-                                side:
-                                    BorderSide(color: Colors.black, width: 2.0.w),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ListTile(
-                                  leading: Image.asset('assets/mtk.png'),
-                                  title: Text(
-                                    'Mathematics',
-                                    style:
-                                        mediaumTextStyle.copyWith(fontSize: 22),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(22.r),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(22.r),
+                                  side:
+                                      BorderSide(color: Colors.black, width: 2.0.w),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: ListTile(
+                                    leading:
+                                        Image.asset('assets/color-palette.png'),
+                                    title: Text(
+                                      'Design',
+                                      style:
+                                          mediaumTextStyle.copyWith(fontSize: 22),
+                                    ),
+                                    subtitle: Text(
+                                        'Learn fourth grade math—arithmetic,'),
+                                    trailing: Image.asset('assets/Play.png'),
                                   ),
-                                  subtitle: Text(
-                                      'Learn fourth grade math—arithmetic,'),
-                                  trailing: Image.asset('assets/Play.png'),
                                 ),
                               ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(22.r),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.r),
-                                side:
-                                    BorderSide(color: Colors.black, width: 2.0.w),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ListTile(
-                                  leading:
-                                      Image.asset('assets/color-palette.png'),
-                                  title: Text(
-                                    'Design',
-                                    style:
-                                        mediaumTextStyle.copyWith(fontSize: 22),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(22.r),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(22.r),
+                                  side:
+                                      BorderSide(color: Colors.black, width: 2.0.w),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: ListTile(
+                                    leading: Image.asset('assets/medal.png'),
+                                    title: Text(
+                                      'Olympiade',
+                                      style:
+                                          mediaumTextStyle.copyWith(fontSize: 22),
+                                    ),
+                                    subtitle: Text(
+                                        'Learn fourth grade math—arithmetic,'),
+                                    trailing: Image.asset('assets/Play.png'),
                                   ),
-                                  subtitle: Text(
-                                      'Learn fourth grade math—arithmetic,'),
-                                  trailing: Image.asset('assets/Play.png'),
                                 ),
                               ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(22.r),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.r),
-                                side:
-                                    BorderSide(color: Colors.black, width: 2.0.w),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: ListTile(
-                                  leading: Image.asset('assets/medal.png'),
-                                  title: Text(
-                                    'Olympiade',
-                                    style:
-                                        mediaumTextStyle.copyWith(fontSize: 22),
-                                  ),
-                                  subtitle: Text(
-                                      'Learn fourth grade math—arithmetic,'),
-                                  trailing: Image.asset('assets/Play.png'),
-                                ),
-                              ),
+                            SizedBox(
+                              height: 33.h,
                             ),
-                          ),
-                          SizedBox(
-                            height: 33.h,
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
