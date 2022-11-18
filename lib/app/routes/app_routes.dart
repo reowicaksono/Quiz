@@ -9,6 +9,7 @@ abstract class Routes {
   static const DETAIL_QUIZ = _Paths.DETAIL_QUIZ;
   static const DETAIL_SCREEN = _Paths.DETAIL_SCREEN;
   static const RESULT_PAGE = _Paths.RESULT_PAGE;
+  static const SIGN_IN = _Paths.SIGN_IN;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const DETAIL_QUIZ = '/detail-quiz';
   static const DETAIL_SCREEN = '/detail-screen';
   static const RESULT_PAGE = '/result-page';
+  static const SIGN_IN = '/sign-in';
 }

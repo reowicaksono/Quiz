@@ -10,6 +10,8 @@ import '../modules/ResultPage/bindings/result_page_binding.dart';
 import '../modules/ResultPage/views/result_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/signIn/bindings/sign_in_binding.dart';
+import '../modules/signIn/views/sign_in_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.RESULT_PAGE,
       page: () => const ResultPageView(),
       binding: ResultPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGN_IN,
+      page: () => const SignInView(),
+      binding: SignInBinding(),
     ),
   ];
 }

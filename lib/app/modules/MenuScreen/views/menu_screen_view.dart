@@ -59,12 +59,12 @@ class MenuScreenView extends GetView<MenuScreenController> {
                           SlideCard(
                             image: 'assets/b1.png',
                             level: 'Level 2',
-                            name: 'Bahasa',
+                            name: '${controller.kategori[0]}',
                           ),
                           SlideCard(
                             image: 'assets/b2.png',
                             level: 'Level 2',
-                            name: 'Bahasa',
+                            name: '${controller.kategori[1]}',
                           ),
                         ],
                       ),
@@ -118,7 +118,7 @@ class MenuScreenView extends GetView<MenuScreenController> {
                                         width: 65.w,
                                       ),
                                       title: Text(
-                                        'Astronomy',
+                                        '${controller.kategori[1]}',
                                         style: mediaumTextStyle.copyWith(
                                             fontSize: 22),
                                       ),
@@ -143,7 +143,7 @@ class MenuScreenView extends GetView<MenuScreenController> {
                                   child: ListTile(
                                     leading: Image.asset('assets/sains.png'),
                                     title: Text(
-                                      'Sains',
+                                      '${controller.kategori[2]}',
                                       style:
                                           mediaumTextStyle.copyWith(fontSize: 22),
                                     ),
@@ -167,7 +167,7 @@ class MenuScreenView extends GetView<MenuScreenController> {
                                   child: ListTile(
                                     leading: Image.asset('assets/mtk.png'),
                                     title: Text(
-                                      'Mathematics',
+                                      '${controller.kategori[3]}',
                                       style:
                                           mediaumTextStyle.copyWith(fontSize: 22),
                                     ),
@@ -192,7 +192,7 @@ class MenuScreenView extends GetView<MenuScreenController> {
                                     leading:
                                         Image.asset('assets/color-palette.png'),
                                     title: Text(
-                                      'Design',
+                                      '${controller.kategori[4]}',
                                       style:
                                           mediaumTextStyle.copyWith(fontSize: 22),
                                     ),
@@ -216,7 +216,7 @@ class MenuScreenView extends GetView<MenuScreenController> {
                                   child: ListTile(
                                     leading: Image.asset('assets/medal.png'),
                                     title: Text(
-                                      'Olympiade',
+                                      '${controller.kategori[5]}',
                                       style:
                                           mediaumTextStyle.copyWith(fontSize: 22),
                                     ),
